@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Side menu</title>
+    <link rel="stylesheet" href="sidemenu.css">
 </head>
 <body>
-    <div class="sidemenu" aria-colspan="menu-collapsed">
+    <div id="sidemenu" class="menu-collapsed">
         <!-- HEADER -->
         <div id="header">
             <div id="title"><span>vida MRR</span></div>
@@ -26,13 +27,43 @@
         
         <!-- ITEMS -->
          <div id="menu-items">
-            <div class="items">
-                <a href="">
+            <div class="item">
+                <a href="#">
                     <div class="icon"><img src="icons/cloud-services.png" alt=""></div>
                     <div class="title"><span>Cloud Services</span></div>
                 </a>
             </div>
+
+            <div class="item separator">
+            
+            </div>
+            
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/cloud-services.png" alt=""></div>
+                    <div class="title"><span>Cloud Services</span></div>
+                </a>
+            </div>
+
          </div>
+
+        
     </div>
+
+    <div id="main-container">hola a todos</div>
+
+    <script>
+        const btn = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#sidemenu');
+
+        btn.addEventListener('click', e =>{
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+
+            document.querySelector('body').classList.toggle('body-expanded');
+
+        })
+
+    </script>
 </body>
 </html>
